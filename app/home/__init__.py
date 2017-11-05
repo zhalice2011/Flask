@@ -4,4 +4,4 @@ from flask import Blueprint
 
 home = Blueprint("home", __name__)
 
-import app.home.views  # 导入views的内容
+import app.home.views  # 从app.home.view里面导入views的内容
