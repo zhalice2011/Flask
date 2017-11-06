@@ -2,16 +2,9 @@
 
 #这个文件用来定义数据模型
 import datetime
-from flask import Flask
-from flask_sqlalchemy import SQLAlchemy
+from app import db  #将db导入进来
 
-app = Flask(__name__)
 
-app.config["SQLALCHEMY_DATABASE_URI"] = "mysql://root:root@127.0.0.1:8889/movie"  #定义一个数据的连接  连接数据库
-
-app.config["SQLAlCHEMY_TRACK_MODIFICATIONS"] = True  #如果设置成true 就会追踪对象
-
-db = SQLAlchemy(app)
 
 #首先定义一个会员的模型  unique=True表示唯一
 
