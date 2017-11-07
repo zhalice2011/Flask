@@ -63,3 +63,5 @@ class LoginForm(FlaskForm):
         admin = User.query.filter_by(name=account).count()  #从表格里面查询出符合结果的有几条
         if admin == 0: #=0说明没有查到
             raise ValidationError("账号不存在") #抛出一个验证的错误
+
+
